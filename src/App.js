@@ -1,27 +1,28 @@
-import './App.css';
-import HeaderR from './Components/Header/Header';
-import Trending from "./Pages/Trending/Trending";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
+import SimpleBottomNavigation from "./components/MainNav";
 import Movies from "./Pages/Movies/Movies";
 import Series from "./Pages/Series/Series";
+import Trending from "./Pages/Trending/Trending";
 import Search from "./Pages/Search/Search";
-import { BrowserRouter,Route,Routes } from "react-router-dom";
-import SimpleBottomNavigation from "./Components/MainNavigation"
-import { Container } from '@material-ui/core';
+import { Container } from "@material-ui/core";
+
 function App() {
   return (
     <BrowserRouter>
-      <HeaderR />
+      <Header />
       <div className="app">
         <Container>
           <Routes>
-            <Route path="/" component={Trending} exact></Route>
-            <Route path="/movies" component={Movies}></Route>
-            <Route path="/series" component={Series}></Route>
-            <Route path="/search" component={Search}></Route>
+            <Route path="/" component={Trending} exact />
+            <Route path="/movies" component={Movies} />
+            <Route path="/series" component={Series} />
+            <Route path="/search" component={Search} />
           </Routes>
         </Container>
       </div>
-      <SimpleBottomNavigation/>
+      <SimpleBottomNavigation />
     </BrowserRouter>
   );
 }
