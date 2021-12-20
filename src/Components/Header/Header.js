@@ -1,6 +1,11 @@
 import "./Header.css";
-const HeaderR = () => {
-    return <span className='header'>🎬Entertainment🎥</span>;
+
+const Header = () => {
+  return (
+    <span onClick={() => window.scroll(0, 0)} className="header">
+      🎬 Entertainment Hub 🎥
+    </span>
+  );
 };
 
-export default HeaderR;
+export default Header;
